@@ -199,7 +199,6 @@ def joint_training(model, inference_model, criterion, optimizer, epochs, train_l
             epochs_no_improve = 0
             torch.save(model.state_dict(), model_path)  # Save best model
             torch.save(inference_model._neural_net.state_dict(), inference_model_path)
-
         else:
             epochs_no_improve += 1
 
